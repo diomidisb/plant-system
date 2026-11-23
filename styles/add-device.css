@@ -1,0 +1,533 @@
+body {
+    margin: 0;
+    font-family: Inter,"Segoe UI",Arial,sans-serif;
+    background: #f3f6f2;
+    color: #21382b;
+    -webkit-font-smoothing: antialiased;
+}
+
+.device-page {
+    --green: #285b3c;
+    --ink: #21382b;
+    --muted: #6b7d70;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 28px 80px;
+    min-height: 75vh;
+    box-sizing: border-box;
+}
+
+.device-page * {
+    box-sizing: border-box;
+}
+
+.device-heading {
+    margin-bottom: 34px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #dae4d9;
+}
+
+.device-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #e5eee1;
+    color: #446548;
+    padding: 9px 14px;
+    border: 1px solid #d8e4d3;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 1.8px;
+}
+
+.device-badge::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #59854d;
+}
+
+.device-heading h1 {
+    margin: 18px 0 10px;
+    font-size: clamp(32px,4vw,46px);
+    line-height: 1.1;
+    letter-spacing: -1.7px;
+    font-weight: 750;
+}
+
+.device-heading p {
+    margin: 0;
+    max-width: 630px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.device-layout {
+    display: grid;
+    grid-template-columns: minmax(280px,350px) minmax(0,1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.device-card {
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #dfe8dd;
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 18px;
+    box-shadow: 0 5px 20px #21382b05;
+    transition: box-shadow .2s,border-color .2s;
+}
+
+.device-card:hover {
+    border-color: #c9d8c6;
+    box-shadow: 0 8px 28px #21382b09;
+}
+
+.add-card {
+    position: sticky;
+    top: 24px;
+    background: linear-gradient(160deg,#ffffff 55%,#f5f9f1);
+    border-top: 4px solid #56804b;
+}
+
+.device-card h2,.device-list>h2 {
+    font-size: 21px;
+    letter-spacing: -.5px;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.description {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 26px;
+}
+
+.device-list>h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 32px;
+    margin-bottom: 18px;
+}
+
+.count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 29px;
+    height: 26px;
+    padding: 0 8px;
+    background: #e2ebde;
+    border: 1px solid #d4e1d0;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #4b684c;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.device-card label {
+    display: block;
+    margin: 20px 0 9px;
+    font-size: 13px;
+    font-weight: 650;
+    color: #354c3d;
+}
+
+.device-card input:not([type=hidden]):not([type=checkbox]) {
+    display: block;
+    width: 100%;
+    padding: 14px 15px;
+    min-height: 49px;
+    background: #f8faf7;
+    border: 1px solid #d8e2d5;
+    border-radius: 11px;
+    font: inherit;
+    font-size: 14px;
+    color: var(--ink);
+    transition: border-color .18s,box-shadow .18s,background .18s;
+}
+
+.device-card input::placeholder {
+    color: #94a08f;
+}
+
+.device-card input:not([type=checkbox]):focus {
+    outline: none;
+    background: #fff;
+    border-color: #71916b;
+    box-shadow: 0 0 0 4px #71916b18;
+}
+
+.device-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 22px;
+    padding: 13px 18px;
+    background: #285b3c;
+    border: 1px solid #285b3c;
+    border-radius: 11px;
+    color: white;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 650;
+    cursor: pointer;
+    box-shadow: 0 3px 6px #285b3c13;
+    transition: background .18s,box-shadow .18s,transform .18s;
+}
+
+.device-button:hover {
+    background: #204a31;
+    border-color: #204a31;
+    box-shadow: 0 5px 12px #285b3c22;
+    transform: translateY(-1px);
+}
+
+.device-button:active {
+    transform: translateY(0);
+}
+
+.device-button:focus-visible,summary:focus-visible,.confirmation input:focus-visible {
+    outline: 3px solid #91b185;
+    outline-offset: 4px;
+}
+
+.device-help {
+    margin: 24px 0 0;
+    padding: 15px 16px;
+    background: #edf3e8;
+    border: 1px solid #dfe9d8;
+    border-radius: 12px;
+    color: #66785f;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.device-card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.device-card-heading h3 {
+    margin: 0;
+    max-width: 100%;
+    font-size: 21px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: -.5px;
+    overflow-wrap: anywhere;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
+    padding: 7px 11px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 650;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.status::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.online {
+    background: #eaf5e7;
+    color: #47733d;
+    border: 1px solid #dcebd6;
+}
+
+.offline {
+    background: #f1f3ef;
+    color: #7d8778;
+    border: 1px solid #e6eae2;
+}
+
+.device-uid {
+    margin: 10px 0 24px;
+    color: #85917f;
+    font-family: ui-monospace,SFMono-Regular,Consolas,monospace;
+    font-size: 11px;
+    letter-spacing: .4px;
+    overflow-wrap: anywhere;
+}
+
+.device-card details {
+    border-top: 1px solid #edf0e9;
+    padding: 0;
+}
+
+.device-card summary {
+    position: relative;
+    padding: 17px 30px 17px 0;
+    min-height: 50px;
+    font-size: 13px;
+    font-weight: 650;
+    color: #4b6650;
+    list-style: none;
+    cursor: pointer;
+    transition: color .18s;
+}
+
+.device-card summary::-webkit-details-marker {
+    display: none;
+}
+
+.device-card summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #e0e7dc;
+    border-radius: 8px;
+    color: #78906e;
+    font-size: 17px;
+    font-weight: 400;
+    background: #f9fbf7;
+}
+
+.device-card details[open]>summary::after {
+    content: "−";
+}
+
+.device-card details[open]>summary {
+    padding-bottom: 8px;
+}
+
+.device-card details form {
+    padding-bottom: 20px;
+}
+
+.device-card details form label:first-of-type {
+    margin-top: 12px;
+}
+
+.device-card details .device-button:not(.danger) {
+    width: auto;
+    min-width: 140px;
+    margin-top: 16px;
+}
+
+.delete-section summary {
+    color: #a65a51;
+}
+
+.delete-section summary::after {
+    color: #aa746b;
+    background: #fcf8f6;
+    border-color: #eedfd9;
+}
+
+.delete-section>p {
+    margin: 8px 0 18px;
+    padding: 14px 16px;
+    background: #fcf7f4;
+    border-left: 3px solid #d7aaa0;
+    border-radius: 0 8px 8px 0;
+    color: #8a6c63;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.device-card .confirmation {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 15px 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #79675f;
+    line-height: 1.7;
+    cursor: pointer;
+}
+
+.confirmation input {
+    accent-color: #a8584d;
+    width: 16px;
+    height: 16px;
+    margin: 2px 0 0;
+    flex-shrink: 0;
+}
+
+.device-card .danger {
+    width: auto;
+    min-width: 160px;
+    background: #fff;
+    border: 1px solid #d8aaa0;
+    color: #a34c41;
+    box-shadow: none;
+    margin-top: 16px;
+}
+
+.device-card .danger:hover {
+    background: #a34c41;
+    border-color: #a34c41;
+    color: #fff;
+    box-shadow: 0 4px 12px #a34c4118;
+}
+
+.device-message {
+    padding: 17px 20px;
+    margin-bottom: 26px;
+    border-radius: 12px;
+    border: 1px solid;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.error {
+    background: #fff3ee;
+    border-color: #efd8ce;
+    color: #9c5141;
+}
+
+.success {
+    background: #edf6e9;
+    border-color: #d8e8d0;
+    color: #4b703f;
+}
+
+.empty-state {
+    padding: 48px 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    border-style: dashed;
+    box-shadow: none;
+    background: #ffffff80;
+}
+
+@media(min-width:1000px) {
+    .device-list>.device-card {
+        padding: 28px 32px;
+    }
+
+}
+
+@media(max-width:800px) {
+    .device-page {
+        padding: 36px 20px 56px;
+    }
+
+    .device-layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .add-card {
+        position: static;
+    }
+
+    .device-heading {
+        margin-bottom: 26px;
+        padding-bottom: 22px;
+    }
+
+    .device-card {
+        padding: 24px;
+    }
+
+    .device-heading h1 {
+        letter-spacing: -1px;
+    }
+
+}
+
+@media(max-width:420px) {
+    .device-page {
+        padding: 28px 14px 44px;
+    }
+
+    .device-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .device-card-heading {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .device-card-heading h3 {
+        font-size: 19px;
+    }
+
+    .device-card details .device-button {
+        width: 100%;
+    }
+
+    .device-heading p {
+        font-size: 14px;
+    }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .device-page * {
+        transition: none!important;
+    }
+
+    .device-button:hover {
+        transform: none;
+    }
+
+}
+
+
+/* Account removal confirmation */
+.device-card .confirmation {
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid #ead6cf;
+    border-radius: 12px;
+    background: #fff8f5;
+    color: #705049;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: background 160ms ease, border-color 160ms ease;
+}
+.device-card .confirmation:hover {
+    background: #fff0e9;
+    border-color: #c99a8d;
+}
+.device-card .confirmation:has(input:checked) {
+    background: #f4e4dc;
+    border-color: #a8584d;
+}
+.device-card .confirmation input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    margin: 0;
+    padding: 0;
+    accent-color: #a8584d;
+    cursor: pointer;
+}

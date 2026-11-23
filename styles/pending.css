@@ -1,0 +1,86 @@
+
+
+.pending-page {
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.pending-card {
+    width:100%;
+    max-width:520px;
+    background:white;
+    padding:45px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.pending-icon {
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.pending-card h1 {
+    margin-bottom:10px;
+}
+
+.pending-name {
+    font-size:24px;
+    font-weight:bold;
+    color:#2f6b3f;
+    margin:15px 0;
+}
+
+.pending-message {
+    color:#666;
+    line-height:1.6;
+}
+
+.pending-email {
+    background:#f3f7f4;
+    padding:12px;
+    border-radius:10px;
+    margin:20px 0;
+    color:#2f6b3f;
+}
+
+.pending-card button {
+    width:100%;
+    padding:15px;
+    border:0;
+    border-radius:10px;
+    background:#2f6b3f;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.pending-card button:hover {
+    opacity:.9;
+}
+
+.pending-verify {
+    display:inline-block;
+    margin-top:20px;
+    color:#2f6b3f;
+    text-decoration:none;
+}
+
+.pending-success {
+    background:#e7f7eb;
+    color:#246b35;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.pending-error {
+    background:#ffe5e5;
+    color:#b00020;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:20px;
+}

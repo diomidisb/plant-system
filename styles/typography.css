@@ -1,0 +1,5 @@
+@font-face { font-family:"Plant Noto Sans"; font-style:normal; font-weight:400 600; font-display:swap; src:url("/fonts/noto-sans-regular.ttf") format("truetype"); }
+@font-face { font-family:"Plant Noto Sans"; font-style:normal; font-weight:700 900; font-display:swap; src:url("/fonts/noto-sans-bold.ttf") format("truetype"); }
+html:lang(el) body,
+html:lang(el) body :where(h1,h2,h3,h4,h5,h6,p,a,button,input,select,textarea,label,div,span,td,th,li) { font-family:"Plant Noto Sans","Segoe UI",sans-serif !important; }
+html:lang(el) body { -webkit-font-smoothing:antialiased; }
