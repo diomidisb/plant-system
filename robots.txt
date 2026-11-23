@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /vendor/
+Disallow: /.git/
+
+Sitemap: https://plantsystemhellas.gr/sitemap.xml

@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "*",
+        "php-mqtt/client": "^2.3"
+    }
+}
